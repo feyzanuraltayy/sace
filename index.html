@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacemühendislik | Web Sitemiz Yapım Aşamasındadır</title>
+    <meta name="description" content="Sacemühendislik yeni web sitesi ile yakında hizmetinizde.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #c39b5a; /* Gold/Champagne accent */
+            --dark: #0a0a0a;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: #ffffff;
+            overflow: hidden; /* Prevent scrolling if any */
+        }
+
+        h1, h2, h3, .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Hero Background with Overlay */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Glassmorphism Effect */
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+
+        /* Accent Color Fix */
+        .text-accent { color: var(--primary); }
+        .bg-accent { background-color: var(--primary); }
+        .border-accent { border-color: var(--primary); }
+
+        .btn-premium {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 14px 0 rgba(195, 155, 90, 0.39);
+        }
+
+        .btn-premium:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(195, 155, 90, 0.5);
+            background-color: #b38a4d;
+        }
+
+        /* Custom underline animation for company name */
+        .company-header::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+            margin: 0.5rem auto 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Main Content -->
+    <main class="hero">
+        <div class="content-card animate-fade-in">
+            
+            <!-- Company Identifier -->
+            <header class="mb-8 animate-fade-in delay-1">
+                <h2 class="company-header text-2xl md:text-4xl font-extrabold tracking-[0.2em] uppercase text-accent font-montserrat">
+                    SACE MÜHENDİSLİK
+                </h2>
+                <p class="text-sm md:text-base font-light tracking-widest text-gray-400 mt-2 font-montserrat uppercase">
+                    Engineering · Architecture · Construction
+                </p>
+            </header>
+
+            <!-- Main Message -->
+            <div class="space-y-6">
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight animate-fade-in delay-2 font-montserrat px-4">
+                    Web Sitemiz Yapım Aşamasındadır
+                </h1>
+                
+                <p class="text-base md:text-lg font-light text-gray-300 max-w-2xl mx-auto animate-fade-in delay-3 px-4">
+                    SACE Mühendislik, Mimarlık, İnş. ve Tic. olarak, çok yakında sizlere daha iyi hizmet verebilmek için yeni web sitemizle karşınızda olacağız.
+                </p>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="mt-10 space-y-8 animate-fade-in delay-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4 max-w-xl mx-auto text-left px-4">
+                    <!-- Phone -->
+                    <div class="flex items-center space-x-3 text-gray-200">
+                        <span class="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-white/10">
+                            <i class="fa-solid fa-phone text-accent text-sm"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-gray-500 uppercase tracking-tighter">Telefon</span>
+                            <a href="tel:+903124728400" class="text-sm hover:text-accent transition-colors">+90 312 472 84 00</a>
+                        </div>
+                    </div>
+
+                    <!-- GSM -->
+                    <div class="flex items-center space-x-3 text-gray-200">
+                        <span class="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-white/10">
+                            <i class="fa-solid fa-mobile-screen text-accent text-sm"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-gray-500 uppercase tracking-tighter">GSM</span>
+                            <a href="tel:+905054131848" class="text-sm hover:text-accent transition-colors">+90 505 413 18 48</a>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-center space-x-3 text-gray-200 col-span-1 md:col-span-2">
+                        <span class="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-white/10">
+                            <i class="fa-solid fa-envelope text-accent text-sm"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-gray-500 uppercase tracking-tighter">E-Posta</span>
+                            <a href="mailto:info@sacemuhendislik.com" class="text-sm hover:text-accent transition-colors">info@sacemuhendislik.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="flex items-start space-x-3 text-gray-200 col-span-1 md:col-span-2">
+                        <span class="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-white/10 mt-1">
+                            <i class="fa-solid fa-location-dot text-accent text-sm"></i>
+                        </span>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-gray-500 uppercase tracking-tighter">Adres</span>
+                            <span class="text-sm leading-relaxed">Mutlukent Mah. 1977. Sok. 16/1 Çankaya / Ankara</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="fixed bottom-0 w-full py-4 text-center text-gray-500 text-[10px] animate-fade-in delay-4 bg-black/20 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            &copy; <span id="year"></span> SACE Mühendislik Mimarlık İnş. ve Tic. · Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+
+    <script>
+        // Update year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
